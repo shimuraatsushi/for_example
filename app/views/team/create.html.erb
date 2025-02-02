@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "user_create" do %>
+  <%= form_with model: @team, url: team_index_path, method: :post do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_field :user_id %>
+    <%= f.submit %>
+  <% end %>
+  <p><%= flash.now[:message] %></p>
+<% end %>

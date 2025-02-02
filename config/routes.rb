@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "team/create"
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -14,4 +15,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :user, only: [:index, :show, :create]
+  resources :team, only: [:create]
 end
